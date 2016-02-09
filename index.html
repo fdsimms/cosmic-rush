@@ -5,6 +5,10 @@
     <title></title>
   </head>
   <body>
+    <canvas id="canvas" width="1000" height="600"></canvas>
+
+    <script type="application/javascript" src="vendor/keymaster.js"></script>
+
     <script type="application/javascript" src="lib/util.js"></script>
     <script type="application/javascript" src="lib/movingObject.js"></script>
     <script type="application/javascript" src="lib/alien.js"></script>
@@ -12,7 +16,6 @@
     <script type="application/javascript" src="lib/gameView.js"></script>
     <script type="application/javascript" src="lib/ship.js"></script>
 
-    <canvas id="canvas" width="1000" height="600"></canvas>
 
     <script type="application/javascript">
        (function () {
@@ -21,7 +24,10 @@
          canvasEl.height = SpaceInvaders.Game.DIM_Y;
          var ctx = canvasEl.getContext("2d");
          var game = new SpaceInvaders.Game();
-         new SpaceInvaders.GameView(game, ctx).start();
+         var gameView = new SpaceInvaders.GameView(game, ctx)
+         gameView.bindKeyHandlers();
+         gameView.start();
+
        })();
      </script>
   </body>
