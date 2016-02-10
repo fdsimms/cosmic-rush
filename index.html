@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Cosmic Rush</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body>
     <canvas id="canvas" width="1000" height="600"></canvas>
@@ -20,11 +21,20 @@
 
     <script type="application/javascript">
        (function () {
+         var ship_image;
+
+         function loadResources() {
+           shipImage = new Image();
+           shipImage.src = "./Hunter1.png";
+         }
+
+         loadResources();
+
          var canvasEl = document.getElementsByTagName("canvas")[0];
          canvasEl.width = SpaceInvaders.Game.DIM_X;
          canvasEl.height = SpaceInvaders.Game.DIM_Y;
          var ctx = canvasEl.getContext("2d");
-         var game = new SpaceInvaders.Game();
+         var game = new SpaceInvaders.Game(shipImage);
          var gameView = new SpaceInvaders.GameView(game, ctx)
          gameView.bindKeyHandlers();
          gameView.start();
