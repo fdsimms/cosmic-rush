@@ -21,11 +21,14 @@
 
     <script type="application/javascript">
        (function () {
-         var ship_image;
+         var shipImage,
+             alienImage;
 
          function loadResources() {
            shipImage = new Image();
-           shipImage.src = "./Hunter1.png";
+           shipImage.src = "gamedevtuts_sprites/Ship/Spritesheet_64x29.png";
+           alienImage = new Image();
+           alienImage.src = "./gamedevtuts_sprites/Enemy/hue_shifted/eSpritesheet_40x30_hue2.png";
          }
 
          loadResources();
@@ -34,7 +37,7 @@
          canvasEl.width = SpaceInvaders.Game.DIM_X;
          canvasEl.height = SpaceInvaders.Game.DIM_Y;
          var ctx = canvasEl.getContext("2d");
-         var game = new SpaceInvaders.Game(shipImage);
+         var game = new SpaceInvaders.Game(shipImage, alienImage);
          var gameView = new SpaceInvaders.GameView(game, ctx)
          gameView.bindKeyHandlers();
          gameView.start();
