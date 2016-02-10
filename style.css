@@ -1,0 +1,14 @@
+#canvas {
+  background-image: url(gamedevtuts_sprites/Backgrounds/starfield.png);
+  background-repeat: repeat-y;
+}
+
+.background {
+  display: block;
+  width: 1000px;
+  height: 600px;
+  top: 8px;
+  background-image: url(gamedevtuts_sprites/Backgrounds/farback.gif);
+  position: absolute;
+  z-index: -1;
+}

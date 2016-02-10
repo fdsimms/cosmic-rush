@@ -3,10 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Cosmic Rush</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <canvas id="canvas" width="1000" height="600"></canvas>
+    <canvas id="canvas" width="1000" height="600">
+    </canvas>
+    <div class="background" />
 
     <script type="application/javascript" src="vendor/keymaster.js"></script>
 
@@ -28,7 +32,7 @@
            shipImage = new Image();
            shipImage.src = "gamedevtuts_sprites/Ship/Spritesheet_64x29.png";
            alienImage = new Image();
-           alienImage.src = "./gamedevtuts_sprites/Enemy/hue_shifted/eSpritesheet_40x30_hue2.png";
+           alienImage.src = "./gamedevtuts_sprites/Enemy/hue_shifted/eSpritesheet_40x30_hue3.png";
          }
 
          loadResources();
