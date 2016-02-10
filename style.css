@@ -9,12 +9,20 @@
 .background {
   display: block;
   width: 1000px;
-  left: 140px;
+  left: 0;
   height: 600px;
-  top: 8px;
+  top: 0;
   background-image: url(gamedevtuts_sprites/Backgrounds/farback.gif);
   position: absolute;
   z-index: -1;
   margin: auto;
   border-radius: 10px;
+}
+
+.main {
+  display: block;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+  margin: auto;
 }
