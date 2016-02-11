@@ -26,3 +26,13 @@
   position: relative;
   margin: auto;
 }
+
+#play-button:before {
+  display: block;
+  position: absolute;
+  top: 37px;
+  left: 918px;
+  color: #ddd;
+  cursor: pointer;
+  z-index: 1;
+}

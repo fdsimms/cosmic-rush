@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
     </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
     <audio id="audio" src="CosmicRush.ogg" autoplay="true">
@@ -14,7 +15,10 @@
     <main class="main">
       <canvas id="canvas" width="1000" height="600">
       </canvas>
-      <div class="background" />
+      <div class="background">
+      </div>
+      <i id="play-button" class="fa fa-2x fa-volume-up playing" >
+      </i>
     </main>
 
     <script type="application/javascript" src="vendor/keymaster.js"></script>
@@ -72,6 +76,21 @@
          }
 
          loadResources();
+
+         var playButton = document.getElementById("play-button");
+         playButton.addEventListener("click", function () {
+           var audio = document.getElementById("audio");
+
+           if ($(this).hasClass("playing")) {
+            audio.pause();
+            $(this).removeClass("fa-volume-up playing");
+            $(this).addClass("paused fa fa-2x fa-volume-off");
+          } else {
+            audio.play();
+            $(this).removeClass("fa-volume-off paused");
+            $(this).addClass("playing fa fa-2x fa-volume-up");
+          }
+         })
 
          var canvasEl = document.getElementsByTagName("canvas")[0];
          canvasEl.width = SpaceInvaders.Game.DIM_X;
