@@ -69,8 +69,8 @@
          canvasEl.width = SpaceInvaders.Game.DIM_X;
          canvasEl.height = SpaceInvaders.Game.DIM_Y;
          var ctx = canvasEl.getContext("2d");
-         var game = new SpaceInvaders.Game(shipImages, alienImages);
-         var gameView = new SpaceInvaders.GameView(game, ctx)
+         var game = new SpaceInvaders.Game(shipImages, alienImages, 1);
+         var gameView = new SpaceInvaders.GameView(game, ctx, shipImages, alienImages)
          gameView.bindKeyHandlers();
          gameView.start();
 
