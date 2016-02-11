@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <audio id="audio" src="CosmicRush.ogg" autoplay="true">
+
+    </audio>
     <main class="main">
       <canvas id="canvas" width="1000" height="600">
       </canvas>
@@ -35,7 +38,12 @@
              alienImage4,
              shipImages = [],
              alienImages = [];
-
+          window.addEventListener("blur", function () {
+            document.getElementById("audio").pause();
+          })
+          window.addEventListener("focus", function () {
+            document.getElementById("audio").play();
+          })
 
          function loadResources() {
            shipImageWithBoost = new Image();
