@@ -27,12 +27,20 @@
   margin: auto;
 }
 
+#sound-button:before,
 #play-button:before {
   display: block;
   position: absolute;
-  top: 37px;
-  left: 918px;
   color: #ddd;
   cursor: pointer;
   z-index: 1;
+  top: 37px;
+}
+
+#play-button:before {
+  left: 945px;
+}
+
+#sound-button:before {
+  left: 900px;
 }

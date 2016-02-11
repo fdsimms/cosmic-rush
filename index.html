@@ -17,7 +17,9 @@
       </canvas>
       <div class="background">
       </div>
-      <i id="play-button" class="fa fa-2x fa-volume-up playing" >
+      <i id="sound-button" class="fa fa-2x fa-volume-up playing" >
+      </i>
+      <i id="play-button" class="fa fa-2x fa-pause" >
       </i>
     </main>
 
@@ -77,8 +79,8 @@
 
          loadResources();
 
-         var playButton = document.getElementById("play-button");
-         playButton.addEventListener("click", function () {
+         var soundButton = document.getElementById("sound-button");
+         soundButton.addEventListener("click", function () {
            var audio = document.getElementById("audio");
 
            if ($(this).hasClass("playing")) {
@@ -92,6 +94,7 @@
           }
          })
 
+
          var canvasEl = document.getElementsByTagName("canvas")[0];
          canvasEl.width = SpaceInvaders.Game.DIM_X;
          canvasEl.height = SpaceInvaders.Game.DIM_Y;
@@ -99,6 +102,20 @@
          var game = new SpaceInvaders.Game(shipImages, alienImages, 1);
          var gameView = new SpaceInvaders.GameView(game, ctx, shipImages, alienImages)
          gameView.bindKeyHandlers();
+
+         var playButton = document.getElementById("play-button");
+         playButton.addEventListener("click", function () {
+           if ($(this).hasClass("fa-pause")) {
+             game.pause();
+             $(this).removeClass("fa-pause");
+             $(this).addClass("fa fa-2x fa-play");
+           } else {
+             game.continuePlay();
+             $(this).removeClass("fa-play");
+             $(this).addClass("fa fa-2x fa-pause");
+           }
+         })
+
          gameView.start();
 
        })();
