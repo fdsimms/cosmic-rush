@@ -27,17 +27,24 @@
 
     <script type="application/javascript">
        (function () {
-         var shipImage,
+         var shipImageWithBoost,
+             shipImageNoBoost,
              alienImage1,
              alienImage2,
              alienImage3,
              alienImage4,
+             shipImages = [],
              alienImages = [];
 
 
          function loadResources() {
-           shipImage = new Image();
-           shipImage.src = "gamedevtuts_sprites/Ship/Spritesheet_64x29.png";
+           shipImageWithBoost = new Image();
+           shipImageWithBoost.src = "gamedevtuts_sprites/Ship/Spritesheet_64x29.png";
+           shipImages.push(shipImageWithBoost);
+
+           shipImageNoBoost = new Image();
+           shipImageNoBoost.src = "gamedevtuts_sprites/Ship/Spritesheet_64x29_no_flame.png";
+           shipImages.push(shipImageNoBoost);
 
            alienImage1 = new Image();
            alienImage1.src = "./gamedevtuts_sprites/Enemy/hue_shifted/eSpritesheet_40x30_hue1.png";
@@ -62,7 +69,7 @@
          canvasEl.width = SpaceInvaders.Game.DIM_X;
          canvasEl.height = SpaceInvaders.Game.DIM_Y;
          var ctx = canvasEl.getContext("2d");
-         var game = new SpaceInvaders.Game(shipImage, alienImages);
+         var game = new SpaceInvaders.Game(shipImages, alienImages);
          var gameView = new SpaceInvaders.GameView(game, ctx)
          gameView.bindKeyHandlers();
          gameView.start();
