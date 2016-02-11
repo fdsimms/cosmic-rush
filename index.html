@@ -48,7 +48,10 @@
             document.getElementById("audio").pause();
           })
           window.addEventListener("focus", function () {
-            document.getElementById("audio").play();
+            var soundButton = document.getElementById("sound-button");
+            if (!$(soundButton).hasClass("paused")) {
+              document.getElementById("audio").play();
+            }
           })
 
          function loadResources() {
