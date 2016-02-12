@@ -27,7 +27,7 @@
         <h2>A game by Frankie Simms</h2>
         <p>Press enter</p>
       </div>
-      <div class="instructions-modal hidden">
+      <div class="instructions-modal hidden-instructions">
         <p>
           Arrow keys to move. Space to shoot. P to pause.
         </p>
@@ -118,6 +118,7 @@
          var ctx = canvasEl.getContext("2d");
          var game = new SpaceInvaders.Game(shipImages, alienImages, 1);
          var gameView = new SpaceInvaders.GameView(game, ctx, shipImages, alienImages)
+         gameView.bindStartHandler();
 
          var playButton = document.getElementById("play-button");
          playButton.addEventListener("click", function () {
