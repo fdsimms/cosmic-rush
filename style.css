@@ -104,11 +104,13 @@ body {
   top: 50%;
   left: 50%;
 }
+
 .game-over-modal {
 
 }
 
-.start-modal {
+.start-modal,
+.game-over-modal {
   text-align: center;
   top: 50%;
   left: 50%;
