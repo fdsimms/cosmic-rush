@@ -130,22 +130,9 @@
          canvasEl.width = SpaceInvaders.Game.DIM_X;
          canvasEl.height = SpaceInvaders.Game.DIM_Y;
          var ctx = canvasEl.getContext("2d");
-         var game = new SpaceInvaders.Game(shipImages, alienImages, 1);
+         var game = window.Game = new SpaceInvaders.Game(shipImages, alienImages, 1);
          var gameView = new SpaceInvaders.GameView(game, ctx, shipImages, alienImages)
          gameView.bindStartHandler();
-
-         var playButton = document.getElementById("play-button");
-         playButton.addEventListener("click", function () {
-           if ($(this).hasClass("fa-pause")) {
-             game.pause();
-             $(this).removeClass("fa-pause");
-             $(this).addClass("fa fa-2x fa-play");
-           } else {
-             game.continuePlay();
-             $(this).removeClass("fa-play");
-             $(this).addClass("fa fa-2x fa-pause");
-           }
-         })
 
          gameView.start();
 
