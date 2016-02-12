@@ -1,3 +1,23 @@
+html, body, h1, h2, div, main, p, ul, li {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  text-decoration: none;
+  cursor: default;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: courier, sans-serif;
+  color: #fff;
+}
+
 #canvas {
   border-radius: 10px;
   margin: auto;
@@ -8,9 +28,9 @@
 
 .background {
   display: block;
-  width: 1000px;
+  width: 100%;
   left: 0;
-  height: 600px;
+  height: 100%;
   top: 0;
   background-image: url(gamedevtuts_sprites/Backgrounds/farback.gif);
   position: absolute;
@@ -43,4 +63,60 @@
 
 #sound-button:before {
   left: 900px;
+}
+
+
+.screen-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+.start-modal,
+.instructions-modal,
+.game-over-modal {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+}
+
+.instructions-modal{
+}
+
+.game-over-modal {
+
+}
+
+.start-modal {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.start-modal h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.start-modal h2 {
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+.start-modal p {
+  padding-top: 5px;
+}
+
+.displayed {
+  display: block;
+}
+
+
+.hidden {
+  display: none;
 }

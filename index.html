@@ -13,6 +13,7 @@
 
     </audio>
     <main class="main">
+      <div class="screen-cover"></div>
       <canvas id="canvas" width="1000" height="600">
       </canvas>
       <div class="background">
@@ -21,6 +22,19 @@
       </i>
       <i id="play-button" class="fa fa-2x fa-pause" >
       </i>
+      <div class="start-modal">
+        <h1>Cosmic Rush</h1>
+        <h2>A game by Frankie Simms</h2>
+        <p>Enter to start.</p>
+      </div>
+      <div class="instructions-modal hidden">
+        <p>
+          Arrow keys to move. Space to shoot. P to pause.
+        </p>
+      </div>
+      <div class="game-over-modal hidden">
+        <h1>GAME OVER</h1>
+      </div>
     </main>
 
     <script type="application/javascript" src="vendor/keymaster.js"></script>
