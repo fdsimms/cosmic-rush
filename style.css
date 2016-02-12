@@ -1,4 +1,4 @@
-html, body, h1, h2, div, main, p, ul, li {
+html, body, h1, h2, div, main, p, ul, li, a {
   margin: 0;
   padding: 0;
   border: none;
@@ -7,6 +7,12 @@ html, body, h1, h2, div, main, p, ul, li {
   background: transparent;
   text-decoration: none;
   cursor: default;
+}
+
+a, button {
+  color: #00d;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 ul {
@@ -135,6 +141,11 @@ body {
 .start-modal p {
   padding-top: 5px;
   text-transform: lowercase;
+}
+
+.start-modal a {
+  display: block;
+  padding-bottom: 10px;
 }
 
 .displayed {
