@@ -12,15 +12,17 @@
     <audio id="audio" src="CosmicRush.ogg" loop="true">
 
     </audio>
-    <main class="main">
+    <main class="main main-normal group">
       <div class="screen-cover"></div>
-      <canvas id="canvas" width="1000" height="600">
+      <canvas id="canvas" class="canvas-normal" width="1000" height="600">
       </canvas>
-      <div class="background">
+      <div class="background background-normal">
       </div>
-      <i id="sound-button" class="fa fa-2x fa-volume-off paused" >
+      <i id="sound-button" class="fa fa-3x fa-volume-off paused" >
       </i>
       <i id="play-button" class="fa fa-2x fa-pause" >
+      </i>
+      <i id="fullscreen-button" class="fa fa-2x fa-arrows-alt" >
       </i>
       <div class="start-modal">
         <h1>Cosmic Rush</h1>
@@ -41,7 +43,10 @@
           Arrow keys to move. Space to shoot.
         </li>
         <li>
-          P or <i class="fa fa-pause"></i> to pause.
+          <i class="fa fa-pause"></i> or P to pause.
+        </li>
+        <li>
+          <i class="fa fa-arrows-alt"></i> for fullscreen.
         </li>
         <li>
            <i class="fa fa-lg fa-volume-off"></i> for music.
@@ -133,8 +138,8 @@
 
 
          var canvasEl = document.getElementsByTagName("canvas")[0];
-         canvasEl.width = SpaceInvaders.Game.DIM_X;
-         canvasEl.height = SpaceInvaders.Game.DIM_Y;
+         canvasEl.width = 1000;
+         canvasEl.height = 600;
          var ctx = canvasEl.getContext("2d");
          var game = window.Game = new SpaceInvaders.Game(shipImages, alienImages, 1);
          var gameView = new SpaceInvaders.GameView(game, ctx, shipImages, alienImages)
