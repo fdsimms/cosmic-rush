@@ -110,6 +110,7 @@ body {
 
 .start-modal p {
   padding-top: 5px;
+  text-transform: lowercase;
 }
 
 .displayed {

@@ -25,7 +25,7 @@
       <div class="start-modal">
         <h1>Cosmic Rush</h1>
         <h2>A game by Frankie Simms</h2>
-        <p>Enter to start.</p>
+        <p>Press enter</p>
       </div>
       <div class="instructions-modal hidden">
         <p>
@@ -118,7 +118,6 @@
          var ctx = canvasEl.getContext("2d");
          var game = new SpaceInvaders.Game(shipImages, alienImages, 1);
          var gameView = new SpaceInvaders.GameView(game, ctx, shipImages, alienImages)
-         gameView.bindKeyHandlers();
 
          var playButton = document.getElementById("play-button");
          playButton.addEventListener("click", function () {
