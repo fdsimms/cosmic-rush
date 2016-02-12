@@ -116,8 +116,10 @@ body {
   left: 50%;
 }
 
-.game-over-modal {
-
+.game-over-modal h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
 }
 
 .start-modal,
