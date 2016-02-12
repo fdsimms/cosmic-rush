@@ -95,8 +95,8 @@ body {
   transform: translateY(-50%) translateX(-50%);
 }
 
-.instructions-modal p {
-  padding: 5px 0;
+.instructions-modal li {
+  padding-top: 5px 0;
 }
 
 .hidden-instructions {
