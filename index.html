@@ -14,7 +14,7 @@
     </audio>
     <main class="main main-normal group">
       <div class="screen-cover"></div>
-      <canvas id="canvas" class="canvas-normal" width="1000" height="600">
+      <canvas id="canvas" class="canvas-normal" width="1000" height="625">
       </canvas>
       <div class="background background-normal">
       </div>
@@ -139,7 +139,7 @@
 
          var canvasEl = document.getElementsByTagName("canvas")[0];
          canvasEl.width = 1000;
-         canvasEl.height = 600;
+         canvasEl.height = 625;
          var ctx = canvasEl.getContext("2d");
          var game = window.Game = new SpaceInvaders.Game(shipImages, alienImages, 1);
          var gameView = new SpaceInvaders.GameView(game, ctx, shipImages, alienImages)

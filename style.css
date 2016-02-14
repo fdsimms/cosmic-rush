@@ -38,7 +38,7 @@ group:after {
 .canvas-normal {
   width: 1000px;
   border-radius: 10px;
-  height: 600px;
+  height: 625px;
 }
 .canvas-full {
   width: 100%;
@@ -57,10 +57,10 @@ group:after {
   z-index: -1;
   margin: auto;
   border-radius: 10px;
+  background-size: cover;
 }
 
 .background-full {
-  background-size: cover;
   border-radius: 0;
 }
 
@@ -75,7 +75,7 @@ group:after {
   top: 50%;
   left: 50%;
   width: 1000px;
-  height: 600px;
+  height: 625px;
   transform: translateY(-50%) translateX(-50%);
 }
 
@@ -107,8 +107,15 @@ group:after {
 }
 
 #sound-button {
-  right: 58px;
   top: 30px;
+}
+
+.fa-volume-off {
+  right: 58px;
+}
+
+.fa-volume-up {
+  right: 45px;
 }
 
 
