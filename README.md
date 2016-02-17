@@ -2,7 +2,7 @@
 
 ## Summary
 
-Cosmic Rush is an old school-style shooter game that draws inspiration from storied classics like Space Invaders and Galaga. It was built from the ground up using JavaScript, jQuery and CSS Canvas. 
+Cosmic Rush is an old school-style shooter game that draws inspiration from storied classics like Space Invaders and Galaga. It was built from the ground up using JavaScript, jQuery and CSS Canvas.
 
 
 ## Languages and Technologies
@@ -10,7 +10,7 @@ Cosmic Rush is an old school-style shooter game that draws inspiration from stor
 - JavaScript
 - HTML
 - jQuery
-- CSS and CSS Canvas
+- CSS
 
 ## Libraries and Other Resources
 - [Keymaster] [keymaster link]
@@ -23,12 +23,10 @@ Cosmic Rush is an old school-style shooter game that draws inspiration from stor
 
 
 ## Features
-- Full sprite and background animations all created with CSS Canvas
-- Two types of collision detection (circle-to-rectangle and circle-to-circle) constructed with 2D linear equations
-- Original soundtrack created with Logic Pro X
+- Full sprite and background animations all created with HTML5 Canvas
+- Two types of custom collision detection for circle-on-rectangle and circle-on-circle collisions
 - Complex enemy motion implemented with vector math
-- Fullscreen mode that takes advantage of jQuery to change classes in order to resize the page's elements
+- Fullscreen mode resizes the page's elements using jQuery
 - High score is stored in a cookie so that it persists across play sessions
-- Endless level system offers endless fun
-
-
+- Endless level system offers ramped-up difficulty
+- Original soundtrack created with Logic Pro X
