@@ -89,7 +89,8 @@ group:after {
 
 #sound-button,
 #play-button,
-#fullscreen-button {
+#fullscreen-button,
+#github-button {
   display: block;
   position: absolute;
   color: #ddd;
@@ -108,6 +109,16 @@ group:after {
 
 #sound-button {
   top: 30px;
+}
+
+#github-button {
+  top: 94%;
+  color: transparent;
+  left: 7px;
+}
+
+.fa-github:before {
+  color: #fff;
 }
 
 .fa-volume-off {
@@ -153,6 +164,18 @@ group:after {
   padding-top: 5px 0;
 }
 
+.instructions-modal li:last-child {
+  padding-top: 20px;
+}
+.instructions-modal li:first-child {
+  padding-bottom: 15px;
+}
+
+.enter-text {
+  text-transform: uppercase;
+  display: inline;
+}
+
 .hidden-instructions {
   top: -400px;
   left: 50%;
@@ -186,22 +209,28 @@ group:after {
 .start-modal h2 {
   font-size: 16px;
   text-transform: lowercase;
+  margin-bottom: 15px;
 }
 
 .start-modal p {
-  padding-top: 5px;
+  margin-top: 5px;
+  display: inline;
   text-transform: lowercase;
 }
+
 
 .start-modal a {
   display: block;
   padding-bottom: 10px;
 }
+.start-modal p > div {
+  text-transform: uppercase;
+  display: inline;
+}
 
 .displayed {
   display: block;
 }
-
 
 .hidden {
   display: none;
