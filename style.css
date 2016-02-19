@@ -160,10 +160,6 @@ group:after {
   transform: translateY(-50%) translateX(-50%);
 }
 
-.instructions-modal li {
-  padding-top: 5px 0;
-}
-
 .instructions-modal li:last-child {
   padding-top: 20px;
 }
