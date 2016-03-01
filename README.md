@@ -1,10 +1,14 @@
 # Cosmic Rush
 
-![Image of Cosmic Rush](cosmic-rush-screenshot.png)
+[Live site][cosmic-rush]
+
+[![Image of Cosmic Rush](cosmic-rush-screenshot.png)][cosmic-rush]
+
+[cosmic-rush]: http://www.fdsimms.com/cosmic-rush
 
 ## Summary
 
-Cosmic Rush is an old school-style shooter game that draws inspiration from storied classics like Space Invaders and Galaga. It was built from the ground up using JavaScript, jQuery and CSS Canvas.
+Cosmic Rush is an old school-style shooter game that draws inspiration from storied classics like Space Invaders and Galaga. It was built from the ground up using JavaScript, jQuery and HTML5 Canvas.
 
 
 ## Languages and Technologies
